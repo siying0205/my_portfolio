@@ -1,5 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation';
+import Introduction from './components/Introduction';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -20,6 +22,14 @@ function App() {
 
             <img className='photo' src={require('./images/img1.jpg')} alt='img1' />
           </div>
+        </div>
+
+        <div className="section-two">
+          <Introduction />
+        </div>
+
+        <div className="section-three">
+          <Experience />
         </div>
       </div>
     </div>
