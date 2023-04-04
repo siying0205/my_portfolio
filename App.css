@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff9ec;
+}
+.container .section-one {
+  background-image: url(./images/bg1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 3em;
+}
+
+.center-area {
+  margin: auto;
+  max-width: 1170px;
+}
+
+.clicked {
+  color: #ff651c;
+}
+
+/* <Navigation/> */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  align-items: center;
+  height: 60px;
+}
+.navBar .contact-btn {
+  display: none;
+  padding: 10px 15px;
+  border: none;
+  background-color: #ff651c;
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+}
+.navBar .contact-btn:hover {
+  cursor: pointer;
+}
+.navBar .logo {
+  display: flex;
+  flex-direction: row;
+}
+.navBar .logo img {
+  width: 12%;
+  margin-right: 0.5em;
+}
+.navBar .logo h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+}
+.navBar .nav .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+.navBar .nav .material-symbols-outlined:hover {
+  cursor: pointer;
+}
+.navBar .nav .navContent {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+}
+.navBar .nav .navContent li {
+  padding: 1em;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.navBar .nav .navContent li:hover {
+  color: #ff651c;
+  cursor: pointer;
+}
+
+/* <App/>*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.intro h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+.intro .text-container {
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.intro .typed-out {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 0;
+  animation: typing 4s steps(30, end) infinite;
+  margin-bottom: 1em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.intro h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+.intro button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ff651c;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+}
+.intro button:hover {
+  cursor: pointer;
+}
+
+.photo {
+  display: block;
+  width: 90%;
+  height: 500px;
+  margin: 3em auto;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  /* <Navigation/> */
+  .navBar .nav .material-symbols-outlined {
+    display: none;
+  }
+  .navBar .nav .navContent {
+    display: flex;
+    position: static;
+    width: auto;
+    border: none;
+    background: none;
+  }
+  .navBar .nav .navContent li {
+    padding: 0.6em;
+  }
+  .navBar .contact-btn {
+    display: block;
+  }
+  /* <App/> */
+  .grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "intro photo";
+    gap: 2px;
+    padding: 5%;
+  }
+  .grid-home .intro {
+    grid-area: intro;
+    padding: 0;
+  }
+  .grid-home .photo {
+    grid-area: photo;
+  }
+}/*# sourceMappingURL=App.css.map */
