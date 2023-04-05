@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Navigation = () => {
+  /* const [display, setDisplay] = React.useState('none')
+
+  const handleClick = () => {
+    setDisplay((prevDisplay) => {
+      return prevDisplay === 'none' ? 'block' : 'none';
+    })
+    const navContent = document.querySelector('.navContent')
+    navContent.style.display = display
+  } */
+
   return (
     <div className='navBar'>
       <div className='logo '>
@@ -9,7 +19,7 @@ const Navigation = () => {
       </div>
 
       <div className='nav'>
-        <span className="material-symbols-outlined">
+        <span className="material-symbols-outlined" /* onClick={handleClick} */>
           menu
         </span>
         <ul className='navContent'>
